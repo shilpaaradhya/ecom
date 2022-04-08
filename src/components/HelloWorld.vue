@@ -1,40 +1,39 @@
 <template>
   <div class="container">
     <div class="topnav row col-xl-12">
-      <div class="col-md-3 logo">
-        <a href="#home">MY COMPANY.COM</a>
+      <div class="col-md-3 logos ">
+        <a  class="logo" href="#home">MY COMPANY.COM</a>
       </div>
       <div class="text-center col-md-7 nav-desktop">
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a href="#news">THE EDIT</a>
+        <a href="#contact">NEW ARRIVALS</a>
+        <a href="#about">DESIGNERS</a>
+        <a href="#news">CLOTHING</a>
+        <a href="#contact">SHOES</a>
+        <a href="#about">BAGS</a>
+        <a href="#contact">JEWELLERY</a>
+        <a href="#about">BEAUTY</a>
       </div>
       <div class="float-right col-md-2 icons">
-        <a href="#news"><i class="fa fa-search" aria-hidden="true"></i></a>
+        <a href="#news"><i class="fa fa-search icon" aria-hidden="true"></i></a>
         <a href="#contact"
-          ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i
+          ><i class="fa fa-cart-arrow-down icon" aria-hidden="true"></i
         ></a>
-        <a href="#about" class="display-desktop" ><i class="fa fa-user" aria-hidden="true"></i></a>
+        <a href="#about" class="display-desktop " ><i class="fa fa-user icon" aria-hidden="true"></i></a>
         <a href="#about" class="display-mobile" > <i class="fa fa-bars" aria-hidden="true"></i></a>
       </div>
     </div>
-    <!-- <h1 class="text-3xl font-bold underline">Hello world!</h1> -->
-
+  
     <div class="row col-xl-12">
       <div class="col-md-3 col-left">
+        <form class="sticky">
         <div class="topnav">
           <a href="#news">Details</a>
           <a href="#contact">Delivery</a>
           <a href="#about">Fit</a>
           <a href="#about">Share</a>
         </div>
-        <div class="description">
+        <div class=" col-md-3 description">
           <h4>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -51,6 +50,7 @@
                <p class="text-lg flex mt-4">
                 learn about the <a class="text-underline">  DESIGNER</a>
               </p>
+        </form>
 
       </div>
       <div class="col-md-6 col-center">
@@ -183,9 +183,9 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3 sticky col-right">
+      <div class="col-md-3  col-right">
         <div class="flex font-sans">
-          <form class="flex-auto">
+          <form class="flex-auto sticky">
             <div class="flex flex-wrap">
               <h1 class="flex-auto text-md font-bold text-slate-800 item-name">
                 JONATHAN SIMKHAI
@@ -377,9 +377,9 @@ export default {
   float: left;
   color: #0c0c0c;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 12px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 /* Change the color of links on hover */
@@ -424,7 +424,7 @@ export default {
 
 .item-name {
   text-transform: uppercase;
-  font-size: 35px !important;
+  font-size: 37px !important;
 }
 
 .size-select {
@@ -443,17 +443,22 @@ export default {
   margin-bottom: 20px;
 }
 
-div.sticky {
+/* div.sticky {
   display: flex;
   position: -webkit-sticky;
   position: sticky;
   top: 10px;
+} */
+
+.sticky{
+   position: fixed !important;
 }
+
 
 button.sticky {
   display: flex;
   position: -webkit-sticky;
-  position: sticky;
+  position: sticky !important;
   top: 10px;
 }
 
@@ -472,6 +477,14 @@ button.sticky {
 }
 .display-mobile {
   display: none;
+}
+
+.logo{
+  font-size: 19px !important;
+}
+
+.icon{
+font-size: 19px !important;
 }
 @media (max-width: 425px) {
   .nav-desktop {
@@ -494,7 +507,7 @@ button.sticky {
     display: block;
   }
 
-  .logo {
+  .logos {
     width: 60%;
   }
 
@@ -502,13 +515,21 @@ button.sticky {
     width: 40%;
   }
 
+.icon{
+  font-size: 12px !important;
+}
+
   .topnav a {
     float: left;
     color: #0c0c0c;
     text-align: center;
     padding: 14px 10px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 12px !important;
   }
+
+  .sticky{
+   position: absolute !important;
+}
 }
 </style>
